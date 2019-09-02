@@ -1,18 +1,15 @@
 import java.awt.Color;
- 
+
+//Convert to RGB to HSB and Back
 public class RGBToHSB {
  
   public static void main(String[] args) {
+
+int red = 31;
  
-// The 3 basic color values in RGB
-//rgb(45, 94, 51)
-//0, 139, 41
-//0, 181, 26
-int red = 0;
+int green = 57;
  
-int green = 181;
- 
-int blue = 26;
+int blue = 0;
  
 // Convert RGB to HSB
  

@@ -1,32 +1,50 @@
 import java.awt.*;
+import java.util.*;
 
 public abstract class Actor {
     Color colour;
     Cell loc;
-    Color myLightGreen = new Color(0, 204, 0);
-    // public static final Color newColour (int r, int g, int b) {
-    //     return newColour(255, 0, 0);
-    // }
-    Color newColour;
+
+    Random randomX = new Random();
+    Random randomY = new Random();
+    Random randomSize = new Random();
+
+    int x_axis = randomX.nextInt(1225);
+    int y_axis = randomY.nextInt(685);
+    int size = randomSize.nextInt(50);
 
     public void paint(Graphics g){
         g.setColor(colour);
-        g.fillRect(loc.x + 5, loc.y + 5, loc.width - 10, loc.height - 10);
-        g.setColor(Color.GRAY);
-        g.drawRect(loc.x + 5, loc.y + 5, loc.width - 10, loc.height - 10);
+        g.fillRect(loc.x + x_axis, loc.y + y_axis, loc.width + size, loc.height + size);
     }
 
     public void paintGrass(Graphics g) {
         g.setColor(colour);
-        g.fillRect(loc.x + 5, loc.y + 5, loc.width - 10, loc.height - 10);
-        g.setColor(colour);
-        g.drawRect(loc.x + 5, loc.y + 5, loc.width - 10, loc.height - 10);
+        g.fillRect(loc.x + x_axis, loc.y + y_axis, loc.width + size, loc.height + size);
     }
 
     public void paintGrass2(Graphics g) {
         g.setColor(colour);
-        g.fillRect(loc.x + 5, loc.y + 5, loc.width - 10, loc.height - 10);
+        g.fillRect(loc.x + x_axis, loc.y + y_axis, loc.width + size, loc.height + size);
+    }
+
+    public void paintGrass3(Graphics g) {
         g.setColor(colour);
-        g.drawRect(loc.x + 5, loc.y + 5, loc.width - 10, loc.height - 10);
+        g.fillRect(loc.x + x_axis, loc.y + y_axis, loc.width + size, loc.height + size);
+    }
+
+    public void paintRoad(Graphics g) {
+        g.setColor(colour);
+        g.fillRect(loc.x + x_axis, loc.y + y_axis, loc.width + size, loc.height + size);
+    }
+
+    public void paintMountain(Graphics g) {
+        g.setColor(colour);
+        g.fillRect(loc.x + x_axis, loc.y + y_axis, loc.width + size, loc.height + size);
+    }
+
+    public void paintWater(Graphics g) {
+        g.setColor(colour);
+        g.fillRect(loc.x + x_axis, loc.y + y_axis, loc.width + size, loc.height + size);
     }
 }

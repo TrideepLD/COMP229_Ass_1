@@ -4,6 +4,13 @@
             "type": "java",
             "name": "CodeLens (Launch) - RGBToHSB",
             "request": "launch",
+            "mainClass": "Color4Cell.RGBToHSB",
+            "projectName": "comp229_2019"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - RGBToHSB",
+            "request": "launch",
             "mainClass": "RGBToHSB",
             "projectName": "comp229_2019"
         },

@@ -1,7 +1,7 @@
 import java.awt.*;
 import java.util.*;
 
-class Grass_2 {
+class Grass_3 {
     //fields
 
     Random randomX = new Random();
@@ -15,7 +15,7 @@ class Grass_2 {
     Cell[][] cells = new Cell[x_axis][y_axis];
 
     // constructor
-    public Grass_2(){
+    public Grass_3(){
         for(int i = 0; i < cells.length; i++){
             for(int j = 0; j < cells[i].length; j++){
                 cells[i][j] = new Cell(10+size*i,10+size*j);
@@ -25,10 +25,10 @@ class Grass_2 {
     
 
     // methods
-    public void paintGrass2(Graphics g){
+    public void paintGrass3(Graphics g){
         for(int i = 0; i < cells.length; i++){
             for(int j = 0; j < cells[i].length; j++){
-                cells[i][j].paintGrass2(g);
+                cells[i][j].paintGrass3(g);
             }
         }
     }
